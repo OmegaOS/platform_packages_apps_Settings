@@ -81,6 +81,12 @@
                 settings:allowDividerAbove="true"
                 settings:allowDividerBelow="true"/>
 
+        <!-- Omega version -->
+        <Preference android:key="omega_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/omega_version"
+                android:summary="@string/omega_version_default" />
+
         <!-- Device firmware version -->
         <Preference android:key="firmware_version"
                 android:enabled="false"

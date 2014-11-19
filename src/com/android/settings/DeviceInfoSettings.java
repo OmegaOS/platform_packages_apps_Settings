@@ -64,6 +64,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
     private static final String KEY_DEVICE_MODEL = "device_model";
+    private static final String KEY_OMEGA_VERSION = "omega_version";
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
@@ -143,6 +144,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         if(mMbnVersion == null){
             getPreferenceScreen().removePreference(findPreference(KEY_MBN_VERSION));
         }
+        setValueSummary(KEY_OMEGA_VERSION, "ro.omega.version");
+        findPreference(KEY_OMEGA_VERSION).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -220,6 +223,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
         removePreferenceIfActivityMissing(
                 "safety_info", "android.settings.SHOW_SAFETY_AND_REGULATORY_INFO");
+
+        // Remove System Updates
+        removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
     }
 
     @Override

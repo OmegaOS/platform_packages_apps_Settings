@@ -21,6 +21,10 @@
     <string name="omega_version">OmegaOS version</string>
     <string name="omega_version_default">Unknown</string>
 
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Device maintainer</string>
+    <string name="device_maintainers">Device maintainers</string>
+
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
 

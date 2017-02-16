@@ -41,4 +41,8 @@
     <string name="battery_percentage_text_inside">Inside the icon</string>
     <string name="battery_percentage_text_next">Next to the icon</string>
 
+    <!-- One handed mode toggle -->
+    <string name="one_handed_mode_title">One handed mode</string>
+    <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+
 </resources>
